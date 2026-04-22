@@ -1,0 +1,7 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img "Cyderes" [ref=e4]
+    - paragraph [ref=e6]: Loading PitchVault Systems...
+  - generic [ref=e7]:
+    - generic [ref=e8]: Loading...
+    - region "Notifications alt+T"

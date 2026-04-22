@@ -1,0 +1,72 @@
+- generic [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - complementary [ref=e9]:
+        - generic [ref=e10]:
+          - img [ref=e12]
+          - generic [ref=e14]:
+            - generic [ref=e15]: PITCHVAULT
+            - generic [ref=e16]: Managed Resource OPS
+        - navigation [ref=e17]:
+          - button [ref=e71]:
+            - img [ref=e20]
+            - generic [ref=e25]: Secure Vault
+          - button [ref=e72]:
+            - img [ref=e29]
+            - generic [ref=e33]: Audit Logs
+          - button [ref=e73]:
+            - img [ref=e36]
+            - generic [ref=e38]: Analytics
+          - button [ref=e74]:
+            - img [ref=e41]
+            - generic [ref=e44]: Admin Settings
+        - generic [ref=e47]:
+          - generic [ref=e48]: MV
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: MVP User
+            - paragraph [ref=e51]: owner
+          - button [ref=e52]:
+            - img
+      - main [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - heading [level=1] [ref=e75]:
+              - text: Resource
+              - generic [ref=e57]: Archive
+            - paragraph [ref=e58]: Encrypted content management
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - img [ref=e61]
+              - textbox [ref=e76]:
+                - /placeholder: Query Records...
+            - button [ref=e77]:
+              - img
+              - text: Directory
+            - button [ref=e78]:
+              - img
+              - text: Ingest Record
+        - generic [ref=e67]:
+          - img [ref=e68]
+          - paragraph [ref=e70]: No records detected in buffer
+    - region "Notifications alt+T":
+      - list:
+        - listitem [ref=e100]:
+          - img [ref=e102]
+          - generic [ref=e105]: Failed to initialize record.
+  - dialog "Ingest Record" [ref=e82]:
+    - heading "Ingest Record" [level=2] [ref=e84]
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - generic [ref=e87]: Title
+        - textbox [ref=e88]: Sales Pitch April 2026
+      - generic [ref=e89]:
+        - generic [ref=e90]: Target Folder
+        - combobox [ref=e91]:
+          - option "Root Archive" [selected]
+      - generic [ref=e92]:
+        - generic [ref=e93]: Initial HTML
+        - textbox [ref=e94]: <h1>Welcome</h1><p>Our solution is the best.</p>
+    - button "Create Record" [active] [ref=e96]
+    - button "Close" [ref=e97]:
+      - img
+      - generic [ref=e98]: Close

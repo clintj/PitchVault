@@ -1,0 +1,185 @@
+- generic [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - banner [ref=e9]:
+        - generic [ref=e10]:
+          - button [ref=e11]:
+            - img
+          - textbox [ref=e12]: TMX
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - button "Visual" [active] [ref=e15]:
+              - img [ref=e16]
+              - text: Visual
+            - button "Code" [ref=e18]:
+              - img [ref=e19]
+              - text: Code
+          - button "Present" [ref=e23]:
+            - img
+            - text: Present
+          - button "Exfiltrate" [ref=e24]:
+            - img
+            - text: Exfiltrate
+          - button "Commit" [ref=e25]:
+            - img
+            - text: Commit
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e29]: buffer.html
+          - generic [ref=e253]:
+            - generic [ref=e254]:
+              - button [ref=e255]:
+                - img
+              - button [ref=e256]:
+                - img
+              - button [ref=e257]:
+                - img
+              - button [ref=e258]:
+                - img
+              - button [ref=e259]:
+                - img
+              - button [ref=e260]:
+                - img
+              - button [ref=e261]:
+                - img
+              - button [ref=e262]:
+                - img
+              - button [ref=e264]:
+                - img
+              - button [ref=e265]:
+                - img
+              - button [ref=e266]:
+                - img
+              - button [disabled]:
+                - img
+              - button [disabled]:
+                - img
+            - generic [ref=e270]:
+              - paragraph [ref=e271]: cyderes
+              - paragraph [ref=e272]: Advanced Red Team Deck
+              - paragraph [ref=e273]: Adversary Simulation · Market Resilience · Executive Risk
+              - heading "Cyderes Red Team Campaign" [level=1] [ref=e274]:
+                - text: Cyderes
+                - text: Red Team Campaign
+              - paragraph [ref=e275]:
+                - text: TMX Group (Toronto Stock Exchange)
+                - text: Adversary Simulation
+              - paragraph [ref=e276]: Context
+              - paragraph [ref=e277]: Approach
+              - paragraph [ref=e278]: Phases
+              - paragraph [ref=e279]: Metrics
+              - paragraph [ref=e280]: Readout
+              - paragraph [ref=e281]: Next Steps
+              - paragraph [ref=e282]: Why TMX is a Unique Target
+              - paragraph [ref=e283]: Context
+              - paragraph [ref=e284]: 2.1Systemically important financial market infrastructure
+              - paragraph [ref=e285]: 2.2Interconnected trading, clearing, settlement ecosystem
+              - paragraph [ref=e286]: 2.3High trust = high impact for disruption or manipulation
+              - paragraph [ref=e287]: 2.4Prime target for nation-state pre-positioning
+              - paragraph [ref=e288]: Modern Threat Reality
+              - paragraph [ref=e289]: Context
+              - paragraph [ref=e290]: 3.1Attacks are persistent, stealthy, and identity-driven
+              - paragraph [ref=e291]: 3.2Nation-states prioritize access over immediate impact
+              - paragraph [ref=e292]: 3.3Cloud, vendors, and identity are primary entry points
+              - paragraph [ref=e293]: "3.4Goal: position for future disruption or influence"
+              - paragraph [ref=e294]: The Problem with Traditional Red Teams
+              - paragraph [ref=e295]: Context
+              - paragraph [ref=e296]: 4.1Focus on technical wins, not business impact
+              - paragraph [ref=e297]: 4.2Short-term engagements miss real adversary behavior
+              - paragraph [ref=e298]: 4.3Lack of identity, vendor, and executive targeting
+              - paragraph [ref=e299]: 4.4No validation of decision-making under pressure
+              - paragraph [ref=e300]: "05"
+              - paragraph [ref=e301]: Campaign Approach
+              - paragraph [ref=e302]: CyderesCampaign-Based Approach
+              - paragraph [ref=e303]: Campaign-based engagement model focused on measurable detection, response, and resilience outcomes.
+              - paragraph [ref=e304]: "Phase 0: Threat Modeling & Scope"
+              - paragraph [ref=e305]: Phase 0
+              - paragraph [ref=e306]: 6.1Identify crown jewels tied to market operations
+              - paragraph [ref=e307]: 6.2Map identity, cloud, and vendor trust relationships
+              - paragraph [ref=e308]: 6.3Align testing to real adversary objectives
+              - paragraph [ref=e309]: 6.4Define impact scenarios tied to business risk
+              - paragraph [ref=e310]: "Phase 1: OSINT & Recon"
+              - paragraph [ref=e311]: Phase 1
+              - paragraph [ref=e312]: 7.1Executive and admin profiling
+              - paragraph [ref=e313]: 7.2External attack surface and identity discovery
+              - paragraph [ref=e314]: 7.3Vendor and third-party exposure mapping
+              - paragraph [ref=e315]: 7.4Pretext development for social engineering
+              - paragraph [ref=e316]: "Phase 2: Initial Access"
+              - paragraph [ref=e317]: Phase 2
+              - paragraph [ref=e318]: 8.1Targeted spear phishing campaigns
+              - paragraph [ref=e319]: 8.2MFA bypass and identity compromise attempts
+              - paragraph [ref=e320]: 8.3Vendor trust exploitation
+              - paragraph [ref=e321]: 8.4Optional physical access scenarios
+              - paragraph [ref=e322]: "Phase 3: Live Adversary Simulation"
+              - paragraph [ref=e323]: Phase 3
+              - paragraph [ref=e324]: 9.1Stealth persistence and lateral movement
+              - paragraph [ref=e325]: 9.2Privilege escalation across identity and cloud
+              - paragraph [ref=e326]: 9.3Movement toward critical systems
+              - paragraph [ref=e327]: 9.4Simulation of real APT tradecraft
+              - paragraph [ref=e328]: "Phase 4: Business Impact Testing"
+              - paragraph [ref=e329]: Phase 4
+              - paragraph [ref=e330]: 10.1Test detection and response timing
+              - paragraph [ref=e331]: 10.2Evaluate escalation and decision-making
+              - paragraph [ref=e332]: 10.3Assess communication under pressure
+              - paragraph [ref=e333]: 10.4Measure impact on market confidence
+              - paragraph [ref=e334]: What We Measure
+              - paragraph [ref=e335]: Metrics
+              - paragraph [ref=e336]: 11.1Time to detect and respond
+              - paragraph [ref=e337]: 11.2Ability to contain adversary movement
+              - paragraph [ref=e338]: 11.3Effectiveness of cross-functional coordination
+              - paragraph [ref=e339]: 11.4Exposure duration of critical systems
+              - paragraph [ref=e340]: "Executive Readout: Choke Points"
+              - paragraph [ref=e341]: Readout
+              - paragraph [ref=e342]: 12.1Identity and access weaknesses
+              - paragraph [ref=e343]: 12.2Vendor and supply chain gaps
+              - paragraph [ref=e344]: 12.3Detection and visibility blind spots
+              - paragraph [ref=e345]: 12.4Operational decision bottlenecks
+              - paragraph [ref=e346]: What You Get
+              - paragraph [ref=e347]: Outcomes
+              - paragraph [ref=e348]: 13.1Clear attacker narrative and replay
+              - paragraph [ref=e349]: 13.2Business-aligned risk translation
+              - paragraph [ref=e350]: 13.3Prioritized remediation roadmap
+              - paragraph [ref=e351]: 13.4Actionable improvements for resilience
+              - paragraph [ref=e352]: Why Cyderes
+              - paragraph [ref=e353]: Differentiator
+              - paragraph [ref=e354]: 14.1Threat-informed offensive security expertise
+              - paragraph [ref=e355]: 14.2Experience in complex enterprise environments
+              - paragraph [ref=e356]: 14.3Focus on real-world adversary simulation
+              - paragraph [ref=e357]: 14.4Partnership approach focused on outcomes
+              - paragraph [ref=e358]: Next Steps
+              - paragraph [ref=e359]: Next
+              - paragraph [ref=e360]: 15.1Align on scope and critical assets
+              - paragraph [ref=e361]: 15.2Select priority threat scenarios
+              - paragraph [ref=e362]: 15.3Define rules of engagement
+              - paragraph [ref=e363]: 15.4Schedule campaign kickoff
+              - paragraph [ref=e364]: 1 / 15
+              - paragraph [ref=e365]: ← PrevNext →
+        - iframe [ref=e251]:
+          - generic [active] [ref=f7e1]:
+            - generic [ref=f7e3]:
+              - generic [ref=f7e6]: cyderes
+              - generic [ref=f7e7]: Advanced Red Team Deck
+            - generic [ref=f7e9]:
+              - generic [ref=f7e10]: Adversary Simulation · Market Resilience · Executive Risk
+              - heading "Cyderes Red Team Campaign" [level=1] [ref=f7e11]:
+                - text: Cyderes
+                - text: Red Team Campaign
+              - paragraph [ref=f7e12]:
+                - text: TMX Group (Toronto Stock Exchange)
+                - text: Adversary Simulation
+              - generic [ref=f7e13]:
+                - generic [ref=f7e14]: Context
+                - generic [ref=f7e15]: Approach
+                - generic [ref=f7e16]: Phases
+                - generic [ref=f7e17]: Metrics
+                - generic [ref=f7e18]: Readout
+                - generic [ref=f7e19]: Next Steps
+            - generic [ref=f7e20]:
+              - generic [ref=f7e37]: 1 / 15
+              - generic [ref=f7e38]:
+                - button "← Prev" [disabled] [ref=f7e39]
+                - button "Next →" [ref=f7e40] [cursor=pointer]
+    - region "Notifications alt+T"
+  - generic [ref=e252]:
+    - alert
+    - alert

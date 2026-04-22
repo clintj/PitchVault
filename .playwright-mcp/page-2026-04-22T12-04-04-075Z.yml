@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e126]:
+      - banner [ref=e127]:
+        - generic [ref=e128]:
+          - button [ref=e129]:
+            - img
+          - textbox [ref=e130]: Sales Pitch April 2026
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - button "Visual" [ref=e133]:
+              - img [ref=e134]
+              - text: Visual
+            - button "Code" [ref=e136]:
+              - img [ref=e137]
+              - text: Code
+          - button "Present" [ref=e141]:
+            - img
+            - text: Present
+          - button "Exfiltrate" [ref=e142]:
+            - img
+            - text: Exfiltrate
+          - button "Commit" [ref=e143]:
+            - img
+            - text: Commit
+      - generic [ref=e144]:
+        - generic [ref=e145]:
+          - generic [ref=e147]: buffer.html
+          - code [ref=e150]:
+            - generic [ref=e151]:
+              - textbox "Editor content" [ref=e152]
+              - textbox [ref=e153]
+              - generic [ref=e158]: "1"
+              - generic [ref=e164]: <h1>Welcome</h1><p>Our solution is the best.</p>
+        - iframe [ref=e167]:
+          - generic [active] [ref=f4e1]:
+            - heading "Welcome" [level=1] [ref=f4e2]
+            - paragraph [ref=f4e3]: Our solution is the best.
+    - region "Notifications alt+T"
+  - generic [ref=e168]:
+    - alert
+    - alert

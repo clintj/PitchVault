@@ -1,0 +1,49 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e38]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e54]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+        - button "Admin Settings" [ref=e59]:
+          - img [ref=e61]
+          - generic [ref=e64]: Admin Settings
+      - generic [ref=e67]:
+        - generic [ref=e68]: MV
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: MVP User
+          - paragraph [ref=e71]: owner
+        - button [ref=e72]:
+          - img
+    - main [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - heading "Resource Archive" [level=1] [ref=e76]:
+            - text: Resource
+            - generic [ref=e77]: Archive
+          - paragraph [ref=e78]: Encrypted content management
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - img [ref=e81]
+            - textbox "Query Records..." [ref=e84]
+          - button "Directory" [ref=e85]:
+            - img
+            - text: Directory
+          - button "Ingest Record" [ref=e86]:
+            - img
+            - text: Ingest Record
+      - generic [ref=e87]:
+        - img [ref=e88]
+        - paragraph [ref=e90]: No records detected in buffer
+  - region "Notifications alt+T"

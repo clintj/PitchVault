@@ -1,0 +1,60 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e38]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e54]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+        - button "Admin Settings" [ref=e59]:
+          - img [ref=e61]
+          - generic [ref=e64]: Admin Settings
+      - generic [ref=e67]:
+        - generic [ref=e68]: MV
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: MVP User
+          - paragraph [ref=e71]: owner
+        - button [ref=e72]:
+          - img
+    - main [ref=e73]:
+      - generic [ref=e75]:
+        - heading "Admin Settings" [level=1] [ref=e104]:
+          - text: Admin
+          - generic [ref=e77]: Settings
+        - paragraph [ref=e78]: Encrypted content management
+      - generic [ref=e107]:
+        - tablist [ref=e108]:
+          - tab "System Config" [ref=e109]
+          - tab "User Registry" [active] [selected] [ref=e110]
+        - tabpanel "User Registry" [ref=e136]:
+          - generic [ref=e137]:
+            - heading "Operator Registry" [level=2] [ref=e138]:
+              - img [ref=e139]
+              - text: Operator Registry
+            - button "Register Operator" [ref=e144]:
+              - img
+              - text: Register Operator
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: CY
+              - generic [ref=e149]:
+                - generic [ref=e150]:
+                  - paragraph [ref=e151]: Cyderes Admin
+                  - generic [ref=e152]: admin
+                - paragraph [ref=e153]: admin@cyderes.com
+            - generic [ref=e154]:
+              - button [ref=e155]:
+                - img
+              - button [ref=e156]:
+                - img
+  - region "Notifications alt+T"

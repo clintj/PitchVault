@@ -1,0 +1,78 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e200]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e201]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e202]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+        - button "Admin Settings" [ref=e203]:
+          - img [ref=e61]
+          - generic [ref=e64]: Admin Settings
+      - generic [ref=e67]:
+        - generic [ref=e68]: MV
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: MVP User
+          - paragraph [ref=e71]: owner
+        - button [ref=e72]:
+          - img
+    - main [ref=e73]:
+      - generic [ref=e75]:
+        - heading "Admin Settings" [level=1] [ref=e204]:
+          - text: Admin
+          - generic [ref=e77]: Settings
+        - paragraph [ref=e78]: Encrypted content management
+      - generic [ref=e107]:
+        - tablist [ref=e108]:
+          - tab "System Config" [ref=e205]
+          - tab "User Registry" [selected] [ref=e206]
+        - tabpanel "User Registry" [ref=e207]:
+          - generic [ref=e137]:
+            - heading "Operator Registry" [level=2] [ref=e208]:
+              - img [ref=e139]
+              - text: Operator Registry
+            - button "Register Operator" [active] [ref=e209]:
+              - img
+              - text: Register Operator
+          - generic [ref=e145]:
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]: AG
+                - generic [ref=e213]:
+                  - generic [ref=e214]:
+                    - paragraph [ref=e215]: Agent 007
+                    - generic [ref=e216]: owner
+                  - paragraph [ref=e217]: agent007@cyderes.com
+              - generic [ref=e218]:
+                - button [ref=e219]:
+                  - img
+                - button [ref=e220]:
+                  - img
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: CY
+                - generic [ref=e149]:
+                  - generic [ref=e150]:
+                    - paragraph [ref=e151]: Cyderes Admin
+                    - generic [ref=e152]: admin
+                  - paragraph [ref=e153]: admin@cyderes.com
+              - generic [ref=e154]:
+                - button [ref=e155]:
+                  - img
+                - button [ref=e156]:
+                  - img
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e221]:
+        - img [ref=e223]
+        - generic [ref=e226]: User registered.

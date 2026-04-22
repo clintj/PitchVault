@@ -1,0 +1,58 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img "Cyderes" [ref=e4]
+    - paragraph [ref=e6]: Loading PitchVault Systems...
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - banner [ref=e9]:
+        - generic [ref=e10]:
+          - button [ref=e11]:
+            - img
+          - textbox [ref=e12]: New Encrypted Document
+        - generic [ref=e13]:
+          - generic [ref=e14]:
+            - button "Visual" [ref=e15]:
+              - img [ref=e16]
+              - text: Visual
+            - button "Code" [ref=e18]:
+              - img [ref=e19]
+              - text: Code
+          - button "Present" [ref=e23]:
+            - img
+            - text: Present
+          - button "Exfiltrate" [ref=e24]:
+            - img
+            - text: Exfiltrate
+          - button "Commit" [ref=e25]:
+            - img
+            - text: Commit
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e29]: buffer.html
+          - generic [ref=e31]: Loading...
+        - iframe [ref=e33]:
+          - generic [active] [ref=f1e1]:
+            - generic [ref=f1e3]:
+              - generic [ref=f1e6]: cyderes
+              - generic [ref=f1e7]: Advanced Red Team Deck
+            - generic [ref=f1e9]:
+              - generic [ref=f1e10]: Adversary Simulation · Market Resilience · Executive Risk
+              - heading "Cyderes Red Team Campaign" [level=1] [ref=f1e11]:
+                - text: Cyderes
+                - text: Red Team Campaign
+              - paragraph [ref=f1e12]:
+                - text: TMX Group (Toronto Stock Exchange)
+                - text: Adversary Simulation
+              - generic [ref=f1e13]:
+                - generic [ref=f1e14]: Context
+                - generic [ref=f1e15]: Approach
+                - generic [ref=f1e16]: Phases
+                - generic [ref=f1e17]: Metrics
+                - generic [ref=f1e18]: Readout
+                - generic [ref=f1e19]: Next Steps
+            - generic [ref=f1e20]:
+              - generic [ref=f1e37]: 1 / 15
+              - generic [ref=f1e38]:
+                - button "← Prev" [disabled] [ref=f1e39]
+                - button "Next →" [ref=f1e40] [cursor=pointer]
+    - region "Notifications alt+T"

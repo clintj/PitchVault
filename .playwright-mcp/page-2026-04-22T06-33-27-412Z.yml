@@ -1,0 +1,56 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e38]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e54]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+      - generic [ref=e61]:
+        - generic [ref=e62]: MV
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: MVP User
+          - paragraph [ref=e65]: owner
+        - button [ref=e66]:
+          - img
+    - main [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "Resource Archive" [level=1] [ref=e70]:
+            - text: Resource
+            - generic [ref=e71]: Archive
+          - paragraph [ref=e72]: Encrypted content management
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - textbox "Query Records..." [ref=e78]
+          - button "Directory" [ref=e79]:
+            - img
+            - text: Directory
+          - button "Ingest Record" [ref=e80]:
+            - img
+            - text: Ingest Record
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - paragraph [ref=e84]: No records detected in buffer
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e85]:
+        - img [ref=e87]
+        - generic [ref=e90]: Failed to load storage.
+      - listitem [ref=e91]:
+        - img [ref=e93]
+        - generic [ref=e96]: Failed to load storage.
+      - listitem [ref=e97]:
+        - img [ref=e99]
+        - generic [ref=e102]: Login successful

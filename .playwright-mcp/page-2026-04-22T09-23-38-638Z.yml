@@ -1,0 +1,58 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e132]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e133]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e134]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+        - button "Admin Settings" [ref=e135]:
+          - img [ref=e61]
+          - generic [ref=e64]: Admin Settings
+      - generic [ref=e67]:
+        - generic [ref=e68]: MV
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: MVP User
+          - paragraph [ref=e71]: owner
+        - button [ref=e72]:
+          - img
+    - main [ref=e73]:
+      - generic [ref=e75]:
+        - heading "Admin Settings" [level=1] [ref=e197]:
+          - text: Admin
+          - generic [ref=e77]: Settings
+        - paragraph [ref=e78]: Encrypted content management
+      - generic [ref=e199]:
+        - generic [ref=e200]:
+          - heading "Microsoft Entra ID App Config" [level=2] [ref=e201]
+          - generic [ref=e202]:
+            - generic [ref=e203]: Client ID
+            - textbox [ref=e204]: client-test-id
+          - generic [ref=e205]:
+            - generic [ref=e206]: Tenant ID
+            - textbox [ref=e207]: tenant-test-id
+          - generic [ref=e208]:
+            - generic [ref=e209]: Redirect URI
+            - textbox [ref=e210]: http://localhost:5173/auth/entra/callback
+          - generic [ref=e211]:
+            - generic [ref=e212]: Current Admin Entra Object ID
+            - textbox [ref=e213]
+        - generic [ref=e214]:
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - heading "Disable Password Auth" [level=2] [ref=e217]
+              - paragraph [ref=e218]: Allowed only after at least one admin has an Entra object ID.
+            - checkbox [checked] [active] [ref=e219]
+          - generic [ref=e220]: No Entra admin present
+          - button "Save Admin Settings" [ref=e221]
+  - region "Notifications alt+T"

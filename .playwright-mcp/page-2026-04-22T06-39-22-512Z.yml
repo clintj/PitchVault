@@ -1,0 +1,58 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e118]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e119]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e120]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+      - generic [ref=e61]:
+        - generic [ref=e62]: MV
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: MVP User
+          - paragraph [ref=e65]: owner
+        - button [ref=e66]:
+          - img
+    - main [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "Resource Archive" [level=1] [ref=e121]:
+            - text: Resource
+            - generic [ref=e71]: Archive
+          - paragraph [ref=e72]: Encrypted content management
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - textbox "Query Records..." [ref=e122]
+          - button "Directory" [ref=e123]:
+            - img
+            - text: Directory
+          - button "Ingest Record" [ref=e124]:
+            - img
+            - text: Ingest Record
+      - generic [ref=e126]:
+        - generic [ref=e127] [cursor=pointer]:
+          - img [ref=e128]
+          - generic [ref=e130]: QA Test Directory
+          - button [ref=e131]:
+            - img [ref=e132]
+        - generic [ref=e135] [cursor=pointer]:
+          - img [ref=e136]
+          - generic [ref=e138]: QA Test Directory
+          - button [ref=e139]:
+            - img [ref=e140]
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e143]:
+        - img [ref=e145]
+        - generic [ref=e148]: Directory registered.

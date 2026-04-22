@@ -1,0 +1,64 @@
+- generic [ref=e7]:
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - generic [ref=e34]:
+          - generic [ref=e35]: PITCHVAULT
+          - generic [ref=e36]: Managed Resource OPS
+      - navigation [ref=e37]:
+        - button "Secure Vault" [ref=e38]:
+          - img [ref=e40]
+          - generic [ref=e45]: Secure Vault
+        - button "Audit Logs" [ref=e47]:
+          - img [ref=e49]
+          - generic [ref=e53]: Audit Logs
+        - button "Analytics" [ref=e54]:
+          - img [ref=e56]
+          - generic [ref=e58]: Analytics
+        - button "Admin Settings" [active] [ref=e59]:
+          - img [ref=e61]
+          - generic [ref=e64]: Admin Settings
+      - generic [ref=e67]:
+        - generic [ref=e68]: MV
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: MVP User
+          - paragraph [ref=e71]: owner
+        - button [ref=e72]:
+          - img
+    - main [ref=e73]:
+      - generic [ref=e75]:
+        - heading "Admin Settings" [level=1] [ref=e104]:
+          - text: Admin
+          - generic [ref=e77]: Settings
+        - paragraph [ref=e78]: Encrypted content management
+      - generic [ref=e107]:
+        - tablist [ref=e108]:
+          - tab "System Config" [selected] [ref=e109]
+          - tab "User Registry" [ref=e110]
+        - tabpanel "System Config" [ref=e111]:
+          - generic [ref=e112]:
+            - heading "Microsoft Entra ID App Config" [level=2] [ref=e113]:
+              - img [ref=e114]
+              - text: Microsoft Entra ID App Config
+            - generic [ref=e116]:
+              - generic [ref=e117]: Client ID
+              - textbox [ref=e118]
+            - generic [ref=e119]:
+              - generic [ref=e120]: Tenant ID
+              - textbox [ref=e121]
+            - generic [ref=e122]:
+              - generic [ref=e123]: Redirect URI
+              - textbox [ref=e124]: http://localhost:5173/auth/entra/callback
+            - generic [ref=e125]:
+              - generic [ref=e126]: Current Admin Entra Object ID
+              - textbox [ref=e127]
+          - generic [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - heading "Disable Password Auth" [level=2] [ref=e131]
+                - paragraph [ref=e132]: Allowed only after at least one admin has an Entra object ID.
+              - checkbox [ref=e133]
+            - generic [ref=e134]: No Entra admin present
+            - button "Commit System Config" [ref=e135]
+  - region "Notifications alt+T"

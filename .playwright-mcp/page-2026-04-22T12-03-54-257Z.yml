@@ -1,0 +1,68 @@
+- generic [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e28]:
+      - complementary [ref=e29]:
+        - generic [ref=e30]:
+          - img [ref=e32]
+          - generic [ref=e34]:
+            - generic [ref=e35]: PITCHVAULT
+            - generic [ref=e36]: Managed Resource OPS
+        - navigation [ref=e37]:
+          - button [ref=e97]:
+            - img [ref=e40]
+            - generic [ref=e45]: Secure Vault
+          - button [ref=e98]:
+            - img [ref=e49]
+            - generic [ref=e53]: Audit Logs
+          - button [ref=e99]:
+            - img [ref=e56]
+            - generic [ref=e58]: Analytics
+          - button [ref=e100]:
+            - img [ref=e61]
+            - generic [ref=e64]: Admin Settings
+        - generic [ref=e67]:
+          - generic [ref=e68]: MV
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: MVP User
+            - paragraph [ref=e71]: owner
+          - button [ref=e72]:
+            - img
+      - main [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - heading [level=1] [ref=e101]:
+              - text: Resource
+              - generic [ref=e77]: Archive
+            - paragraph [ref=e78]: Encrypted content management
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - textbox [ref=e102]:
+                - /placeholder: Query Records...
+            - button [ref=e103]:
+              - img
+              - text: Directory
+            - button [ref=e104]:
+              - img
+              - text: Ingest Record
+        - generic [ref=e87]:
+          - img [ref=e88]
+          - paragraph [ref=e90]: No records detected in buffer
+    - region "Notifications alt+T"
+  - dialog "Ingest Record" [ref=e108]:
+    - heading "Ingest Record" [level=2] [ref=e110]
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - generic [ref=e113]: Title
+        - textbox [active] [ref=e114]: New Encrypted Document
+      - generic [ref=e115]:
+        - generic [ref=e116]: Target Folder
+        - combobox [ref=e117]:
+          - option "Root Archive" [selected]
+      - generic [ref=e118]:
+        - generic [ref=e119]: Initial HTML
+        - textbox [ref=e120]: <h1>New Protocol</h1><p>Enter data...</p>
+    - button "Create Record" [ref=e122]
+    - button "Close" [ref=e123]:
+      - img
+      - generic [ref=e124]: Close

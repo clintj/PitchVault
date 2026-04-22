@@ -1,0 +1,42 @@
+- generic [ref=e7]:
+  - generic [ref=e8]:
+    - complementary [ref=e9]:
+      - generic [ref=e10]:
+        - img [ref=e12]
+        - generic [ref=e14]:
+          - generic [ref=e15]: PITCHVAULT
+          - generic [ref=e16]: Managed Resource OPS
+      - navigation [ref=e17]:
+        - button "Secure Vault" [ref=e18]:
+          - img [ref=e20]
+          - generic [ref=e25]: Secure Vault
+        - button "Audit Logs" [ref=e27]:
+          - img [ref=e29]
+          - generic [ref=e33]: Audit Logs
+        - button "Analytics" [ref=e34]:
+          - img [ref=e36]
+          - generic [ref=e38]: Analytics
+        - button "Admin Settings" [active] [ref=e39]:
+          - img [ref=e41]
+          - generic [ref=e44]: Admin Settings
+      - generic [ref=e47]:
+        - generic [ref=e48]: MV
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: MVP User
+          - paragraph [ref=e51]: owner
+        - button [ref=e52]:
+          - img
+    - main [ref=e53]:
+      - generic [ref=e55]:
+        - heading "Admin Settings" [level=1] [ref=e84]:
+          - text: Admin
+          - generic [ref=e57]: Settings
+        - paragraph [ref=e58]: Encrypted content management
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e85]:
+        - img [ref=e87]
+        - generic [ref=e90]: Failed to load user registry.
+      - listitem [ref=e91]:
+        - img [ref=e93]
+        - generic [ref=e96]: Could not validate credentials

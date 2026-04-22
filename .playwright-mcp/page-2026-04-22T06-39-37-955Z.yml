@@ -1,0 +1,44 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e149]:
+      - banner [ref=e150]:
+        - generic [ref=e151]:
+          - button [ref=e152]:
+            - img
+          - textbox [ref=e153]: New Encrypted Document
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - button "Visual" [ref=e156]:
+              - img [ref=e157]
+              - text: Visual
+            - button "Code" [ref=e159]:
+              - img [ref=e160]
+              - text: Code
+          - button "Present" [ref=e164]:
+            - img
+            - text: Present
+          - button "Exfiltrate" [ref=e165]:
+            - img
+            - text: Exfiltrate
+          - button "Commit" [ref=e166]:
+            - img
+            - text: Commit
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e170]: buffer.html
+          - code [ref=e173]:
+            - generic [ref=e174]:
+              - textbox "Editor content" [ref=e175]
+              - textbox [ref=e176]
+              - generic [ref=e181]: "1"
+              - generic [ref=e189]:
+                - generic [ref=e191]: <h1>New Protocol</h1><p>Enter
+                - generic [ref=e193]: data...</p>
+        - iframe [ref=e196]:
+          - generic [active] [ref=f1e1]:
+            - heading "New Protocol" [level=1] [ref=f1e2]
+            - paragraph [ref=f1e3]: Enter data...
+    - region "Notifications alt+T"
+  - generic [ref=e197]:
+    - alert
+    - alert

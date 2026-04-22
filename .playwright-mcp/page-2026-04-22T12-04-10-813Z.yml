@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e169]:
+      - generic [ref=e170]:
+        - button "Enter Fullscreen" [ref=e171]:
+          - img
+        - button "Close Session" [ref=e172]
+      - iframe [ref=e174]:
+        - generic [active] [ref=f5e1]:
+          - heading "Welcome" [level=1] [ref=f5e2]
+          - paragraph [ref=f5e3]: Our solution is the best.
+    - region "Notifications alt+T"
+  - generic [ref=e168]:
+    - alert
+    - alert

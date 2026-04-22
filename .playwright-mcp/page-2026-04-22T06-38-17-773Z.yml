@@ -1,0 +1,55 @@
+- generic [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e28]:
+      - complementary [ref=e29]:
+        - generic [ref=e30]:
+          - img [ref=e32]
+          - generic [ref=e34]:
+            - generic [ref=e35]: PITCHVAULT
+            - generic [ref=e36]: Managed Resource OPS
+        - navigation [ref=e37]:
+          - button [ref=e91]:
+            - img [ref=e40]
+            - generic [ref=e45]: Secure Vault
+          - button [ref=e92]:
+            - img [ref=e49]
+            - generic [ref=e53]: Audit Logs
+          - button [ref=e93]:
+            - img [ref=e56]
+            - generic [ref=e58]: Analytics
+        - generic [ref=e61]:
+          - generic [ref=e62]: MV
+          - generic [ref=e63]:
+            - paragraph [ref=e64]: MVP User
+            - paragraph [ref=e65]: owner
+          - button [ref=e66]:
+            - img
+      - main [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - heading [level=1] [ref=e94]:
+              - text: Resource
+              - generic [ref=e71]: Archive
+            - paragraph [ref=e72]: Encrypted content management
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - img [ref=e75]
+              - textbox [ref=e95]:
+                - /placeholder: Query Records...
+            - button [ref=e96]:
+              - img
+              - text: Directory
+            - button [ref=e97]:
+              - img
+              - text: Ingest Record
+        - generic [ref=e81]:
+          - img [ref=e82]
+          - paragraph [ref=e84]: No records detected in buffer
+    - region "Notifications alt+T"
+  - dialog "Initialize Directory" [ref=e101]:
+    - heading "Initialize Directory" [level=2] [ref=e103]
+    - textbox "Directory Alias" [active] [ref=e106]
+    - button "Deploy Directory" [ref=e108]
+    - button "Close" [ref=e109]:
+      - img
+      - generic [ref=e110]: Close

@@ -1,0 +1,50 @@
+- generic [ref=e1]:
+  - generic [ref=e7]:
+    - generic [ref=e132]:
+      - banner [ref=e133]:
+        - generic [ref=e134]:
+          - button [ref=e135]:
+            - img
+          - textbox [ref=e136]: Sales Pitch April 2026
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - button [ref=e187]:
+              - img [ref=e140]
+              - text: Visual
+            - button [ref=e188]:
+              - img [ref=e143]
+              - text: Code
+          - button [ref=e189]:
+            - img
+            - text: Present
+          - button [expanded] [ref=e190]:
+            - img
+            - text: Exfiltrate
+          - button [ref=e191]:
+            - img
+            - text: Commit
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - generic [ref=e153]: buffer.html
+          - code [ref=e156]:
+            - generic [ref=e157]:
+              - textbox [ref=e192]
+              - textbox [ref=e159]
+              - generic [ref=e164]: "1"
+              - generic [ref=e170]: <h1>Welcome</h1><p>Our solution is the best.</p>
+        - iframe [ref=e173]:
+          - generic [active] [ref=f1e1]:
+            - heading "Welcome" [level=1] [ref=f1e2]
+            - paragraph [ref=f1e3]: Our solution is the best.
+    - region "Notifications alt+T"
+  - dialog "Security Protocol" [ref=e196]:
+    - heading "Security Protocol" [level=2] [ref=e198]
+    - generic [ref=e200]:
+      - generic [ref=e201]: Access Level
+      - combobox [active] [ref=e202]:
+        - option "Public (Anyone with link)" [selected]
+        - option "Password Gated"
+    - button "Generate Protocol Link" [ref=e204]
+    - button "Close" [ref=e205]:
+      - img
+      - generic [ref=e206]: Close

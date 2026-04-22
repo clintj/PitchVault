@@ -1,0 +1,14 @@
+- generic [ref=e3]:
+  - generic [ref=e4]: "[plugin:vite:import-analysis] Failed to resolve import \"react-router-dom\" from \"src/app/App.tsx\". Does the file exist?"
+  - generic [ref=e5]: /app/src/app/App.tsx:2:55
+  - generic [ref=e6]: "2 | var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(); 3 | import { useState, useEffect } from \"react\"; 4 | import { BrowserRouter, Routes, Route, Navigate } from \"react-router-dom\"; | ^ 5 | import { motion, AnimatePresence } from \"motion/react\"; 6 | import { Toaster } from \"sonner\";"
+  - generic [ref=e7]: at TransformPluginContext._formatLog (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42553:41) at TransformPluginContext.error (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42550:16) at normalizeUrl (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40529:23) at process.processTicksAndRejections (node:internal/process/task_queues:103:5) at async file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40648:37 at async Promise.all (index 2) at async TransformPluginContext.transform (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40575:7) at async EnvironmentPluginContainer.transform (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42348:18) at async loadAndTransform (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:35740:27) at async viteTransformMiddleware (file:///app/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:37264:24
+  - generic [ref=e8]:
+    - text: Click outside, press Esc key, or fix the code to dismiss.
+    - text: You can also disable this overlay by setting
+    - code [ref=e9]: server.hmr.overlay
+    - text: to
+    - code [ref=e10]: "false"
+    - text: in
+    - code [ref=e11]: vite.config.ts
+    - text: .

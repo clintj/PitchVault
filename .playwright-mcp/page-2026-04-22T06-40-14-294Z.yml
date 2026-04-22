@@ -1,0 +1,48 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img "Cyderes" [ref=e4]
+    - paragraph [ref=e6]: Loading PitchVault Systems...
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - complementary [ref=e9]:
+        - generic [ref=e10]:
+          - img [ref=e12]
+          - generic [ref=e14]:
+            - generic [ref=e15]: PITCHVAULT
+            - generic [ref=e16]: Managed Resource OPS
+        - navigation [ref=e17]:
+          - button "Secure Vault" [ref=e18]:
+            - img [ref=e20]
+            - generic [ref=e25]: Secure Vault
+          - button "Audit Logs" [ref=e27]:
+            - img [ref=e29]
+            - generic [ref=e33]: Audit Logs
+          - button "Analytics" [ref=e34]:
+            - img [ref=e36]
+            - generic [ref=e38]: Analytics
+        - generic [ref=e41]:
+          - generic [ref=e42]: MV
+          - generic [ref=e43]:
+            - paragraph [ref=e44]: MVP User
+            - paragraph [ref=e45]: owner
+          - button [ref=e46]:
+            - img
+      - main [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - heading "Resource Archive" [level=1] [ref=e50]:
+              - text: Resource
+              - generic [ref=e51]: Archive
+            - paragraph [ref=e52]: Encrypted content management
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - img [ref=e55]
+              - textbox "Query Records..." [ref=e58]
+            - button "Directory" [ref=e59]:
+              - img
+              - text: Directory
+            - button "Ingest Record" [ref=e60]:
+              - img
+              - text: Ingest Record
+        - generic [ref=e61]: Querying Databases...
+    - region "Notifications alt+T"
