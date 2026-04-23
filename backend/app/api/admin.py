@@ -105,7 +105,11 @@ async def audit_log(
         select(ShareLink).where(ShareLink.created_by == current_user.id).order_by(desc(ShareLink.created_at)).limit(20)
     )
     session_rows = await db.execute(
-        select(ViewerSession).order_by(desc(ViewerSession.started_at)).limit(20)
+        select(ViewerSession, ShareLink, Document).join(
+            ShareLink, ViewerSession.share_link_id == ShareLink.id
+        ).join(
+            Document, ShareLink.document_id == Document.id
+        ).order_by(desc(ViewerSession.started_at)).limit(20)
     )
 
     events = []
@@ -113,19 +117,30 @@ async def audit_log(
         events.append({
             "time": doc.created_at,
             "type": "document",
+            "document_title": doc.title,
             "message": f"Document created: {doc.title}",
         })
     for share in share_rows.scalars().all():
         events.append({
             "time": share.created_at,
             "type": "share",
+            "document_title": "(loading...)",
+            "share_slug": share.slug,
             "message": f"Share created: /v/{share.slug}",
         })
-    for session in session_rows.scalars().all():
+    for session, share, doc in session_rows.all():
+        viewer_id = session.viewer_email or session.viewer_name or "anonymous"
         events.append({
             "time": session.started_at,
             "type": "viewer",
-            "message": f"Viewer session started: {session.viewer_email or session.viewer_name or 'anonymous'}",
+            "document_title": doc.title,
+            "share_slug": share.slug,
+            "viewer_name": session.viewer_name,
+            "viewer_email": session.viewer_email,
+            "ip_address": session.ip_address,
+            "user_agent": session.user_agent,
+            "access_count": share.view_count,
+            "message": f"Viewed "{doc.title}" via /v/{share.slug}: {viewer_id} from {session.ip_address or 'unknown IP'}",
         })
 
     return sorted(events, key=lambda item: item["time"] or datetime.min, reverse=True)[:40]
@@ -143,11 +158,26 @@ async def analytics(
         select(func.count()).select_from(Document).where(Document.owner_id == current_user.id, Document.is_archived == False)
     )
     shares = await db.scalar(select(func.count()).select_from(ShareLink).where(ShareLink.created_by == current_user.id))
-    sessions = await db.scalar(select(func.count()).select_from(ViewerSession))
+
+    sessions = await db.scalar(
+        select(func.count()).select_from(ViewerSession).join(
+            ShareLink, ViewerSession.share_link_id == ShareLink.id
+        ).where(ShareLink.created_by == current_user.id)
+    )
     views = await db.scalar(select(func.coalesce(func.sum(ShareLink.view_count), 0)).where(ShareLink.created_by == current_user.id))
 
     top_rows = await db.execute(
-        select(ShareLink.slug, ShareLink.view_count).where(ShareLink.created_by == current_user.id).order_by(desc(ShareLink.view_count)).limit(5)
+        select(ShareLink.slug, ShareLink.view_count, Document.title, ShareLink.expires_at).join(
+            Document, ShareLink.document_id == Document.id
+        ).where(ShareLink.created_by == current_user.id).order_by(desc(ShareLink.view_count)).limit(5)
+    )
+
+    recent_sessions = await db.execute(
+        select(ViewerSession, Document.title).join(
+            ShareLink, ViewerSession.share_link_id == ShareLink.id
+        ).join(
+            Document, ShareLink.document_id == Document.id
+        ).where(ShareLink.created_by == current_user.id).order_by(desc(ViewerSession.started_at)).limit(10)
     )
 
     return {
@@ -156,7 +186,27 @@ async def analytics(
         "shares": shares or 0,
         "viewer_sessions": sessions or 0,
         "total_views": views or 0,
-        "top_shares": [{"slug": slug, "views": count} for slug, count in top_rows.all()],
+        "top_shares": [
+            {
+                "slug": slug,
+                "views": count,
+                "document_title": title,
+                "expires_at": expires_at
+            }
+            for slug, count, title, expires_at in top_rows.all()
+        ],
+        "recent_sessions": [
+            {
+                "viewer_name": session.viewer_name,
+                "viewer_email": session.viewer_email,
+                "ip_address": session.ip_address,
+                "user_agent": session.user_agent,
+                "document_title": title,
+                "started_at": session.started_at,
+                "total_time_seconds": session.total_time_seconds
+            }
+            for session, title in recent_sessions.all()
+        ]
     }
 
 @router.get("/users", response_model=List[UserResponse])

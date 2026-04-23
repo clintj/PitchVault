@@ -94,6 +94,12 @@ class ShareLinkBase(BaseModel):
     
 class ShareLinkCreate(ShareLinkBase):
     password: Optional[str] = None
+    document_id: uuid.UUID = None
+    access_type: str = "public"
+    allowed_emails: Optional[List[str]] = None
+    expires_at: Optional[datetime] = None
+    max_views: Optional[int] = None
+    require_name: bool = False
 
 class ShareLinkResponse(ShareLinkBase):
     id: uuid.UUID

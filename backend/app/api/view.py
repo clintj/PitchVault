@@ -83,6 +83,7 @@ async def start_session(slug: str, req: Request, session_data: ViewerSessionStar
         viewer_email=session_data.email,
         viewer_name=session_data.name,
         ip_hash=ip_hash,
+        ip_address=ip,
         user_agent=user_agent
     )
     db.add(new_session)

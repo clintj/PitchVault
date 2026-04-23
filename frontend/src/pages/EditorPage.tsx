@@ -18,7 +18,17 @@ export function EditorPage() {
   const [mode, setMode] = useState<'code' | 'visual'>('code');
   const [loading, setLoading] = useState(true);
   const [isShareOpen, setIsShareOpen] = useState(false);
-  const [shareConfig, setShareConfig] = useState<any>({ access_type: "public" });
+  const getDefaultExpiration = () => {
+    const date = new Date();
+    date.setDate(date.getDate() + 7);
+    return date.toISOString().split('T')[0];
+  };
+  const [shareConfig, setShareConfig] = useState<any>({
+    access_type: "public",
+    expires_at: getDefaultExpiration(),
+    password: "",
+    max_views: null
+  });
 
   useEffect(() => {
     const fetchDoc = async () => {
@@ -70,10 +80,21 @@ export function EditorPage() {
 
   const handleCreateShare = async () => {
     try {
-      const res = await api.post(`/shares/`, { 
-        document_id: id, 
-        access_type: shareConfig.access_type 
-      });
+      const payload: any = {
+        document_id: id,
+        access_type: shareConfig.access_type,
+        expires_at: shareConfig.expires_at ? new Date(shareConfig.expires_at).toISOString() : null,
+      };
+
+      if (shareConfig.access_type === "password" && shareConfig.password) {
+        payload.password = shareConfig.password;
+      }
+
+      if (shareConfig.max_views) {
+        payload.max_views = parseInt(shareConfig.max_views);
+      }
+
+      const res = await api.post(`/shares/`, payload);
       const shareUrl = `${window.location.origin}/v/${res.data.slug}`;
       await navigator.clipboard.writeText(shareUrl);
       toast.success("Share link created and copied to clipboard!");
@@ -123,22 +144,57 @@ export function EditorPage() {
             >
               <Share2 size={14} className="text-primary" /> Exfiltrate
             </DialogTrigger>
-            <DialogContent className="bg-black/95 border-primary/30 text-foreground">
+            <DialogContent className="bg-black/95 border-primary/30 text-foreground max-w-sm">
               <DialogHeader>
                 <DialogTitle className="uppercase font-mono tracking-widest text-primary">Security Protocol</DialogTitle>
               </DialogHeader>
               <div className="py-6 space-y-4">
+                <div className="space-y-2">
+                  <Label className="font-mono text-xs uppercase tracking-widest text-white">Access Level</Label>
+                  <select
+                    value={shareConfig.access_type}
+                    onChange={(e) => setShareConfig({...shareConfig, access_type: e.target.value})}
+                    className="w-full bg-card border border-border rounded-md px-3 py-2 text-sm text-white"
+                  >
+                    <option value="public">Public (Anyone with link)</option>
+                    <option value="password">Password Gated</option>
+                  </select>
+                </div>
+
+                {shareConfig.access_type === "password" && (
                   <div className="space-y-2">
-                    <Label className="font-mono text-xs uppercase tracking-widest text-white">Access Level</Label>
-                    <select 
-                      value={shareConfig.access_type} 
-                      onChange={(e) => setShareConfig({...shareConfig, access_type: e.target.value})}
-                      className="w-full bg-card border border-border rounded-md px-3 py-2 text-sm text-white"
-                    >
-                        <option value="public">Public (Anyone with link)</option>
-                        <option value="password">Password Gated</option>
-                    </select>
+                    <Label className="font-mono text-xs uppercase tracking-widest text-white">Access Password</Label>
+                    <input
+                      type="password"
+                      value={shareConfig.password}
+                      onChange={(e) => setShareConfig({...shareConfig, password: e.target.value})}
+                      placeholder="Enter password"
+                      className="w-full bg-card border border-border rounded-md px-3 py-2 text-sm text-white placeholder:text-muted-foreground"
+                    />
                   </div>
+                )}
+
+                <div className="space-y-2">
+                  <Label className="font-mono text-xs uppercase tracking-widest text-white">Link expires on</Label>
+                  <input
+                    type="date"
+                    value={shareConfig.expires_at}
+                    onChange={(e) => setShareConfig({...shareConfig, expires_at: e.target.value})}
+                    className="w-full bg-card border border-border rounded-md px-3 py-2 text-sm text-white"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label className="font-mono text-xs uppercase tracking-widest text-white">View limit (optional)</Label>
+                  <input
+                    type="number"
+                    min="1"
+                    value={shareConfig.max_views || ""}
+                    onChange={(e) => setShareConfig({...shareConfig, max_views: e.target.value})}
+                    placeholder="Unlimited"
+                    className="w-full bg-card border border-border rounded-md px-3 py-2 text-sm text-white placeholder:text-muted-foreground"
+                  />
+                </div>
               </div>
               <DialogFooter>
                 <Button className="w-full neon-border uppercase font-mono text-[10px] py-4" onClick={handleCreateShare}>Generate Protocol Link</Button>

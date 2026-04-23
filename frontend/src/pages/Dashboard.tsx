@@ -16,6 +16,34 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+function parseUserAgent(ua: string | null | undefined): string {
+  if (!ua) return 'Unknown Browser';
+
+  let browser = 'Unknown';
+  let os = 'Unknown OS';
+
+  if (ua.includes('Chrome') && !ua.includes('Chromium')) browser = 'Chrome';
+  else if (ua.includes('Safari')) browser = 'Safari';
+  else if (ua.includes('Firefox')) browser = 'Firefox';
+  else if (ua.includes('Edge')) browser = 'Edge';
+  else if (ua.includes('Opera')) browser = 'Opera';
+
+  if (ua.includes('Windows')) os = 'Windows';
+  else if (ua.includes('Mac')) os = 'macOS';
+  else if (ua.includes('Linux')) os = 'Linux';
+  else if (ua.includes('Android')) os = 'Android';
+  else if (ua.includes('iPhone') || ua.includes('iPad')) os = 'iOS';
+
+  return `${browser} on ${os}`;
+}
+
+function formatDuration(seconds: number): string {
+  if (seconds < 60) return `${seconds}s`;
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}m ${secs}s`;
+}
+
 export function Dashboard() {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
@@ -352,11 +380,40 @@ export function Dashboard() {
                 <div className="border border-dashed border-primary/20 bg-primary/5 rounded-lg p-10 font-mono text-xs uppercase text-muted-foreground">No audit events found</div>
               ) : auditEvents.map((event, index) => (
                 <div key={`${event.time}-${index}`} className="border border-border bg-card/50 rounded-lg p-4">
-                  <div className="flex items-center justify-between gap-4">
-                    <Badge variant="outline" className="uppercase font-mono text-[9px] border-primary/20 text-primary">{event.type}</Badge>
-                    <span className="font-mono text-[10px] text-muted-foreground">{event.time ? new Date(event.time).toLocaleString() : 'Unknown time'}</span>
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <div className="flex items-center gap-3">
+                      <Badge variant="outline" className="uppercase font-mono text-[9px] border-primary/20 text-primary">{event.type}</Badge>
+                      <span className="text-white font-semibold text-sm">{event.document_title}</span>
+                    </div>
+                    <span className="font-mono text-[10px] text-muted-foreground">{event.time ? new Date(event.time).toLocaleString() : 'Unknown'}</span>
                   </div>
-                  <p className="mt-3 text-sm text-white">{event.message}</p>
+
+                  {event.type === 'viewer' && (
+                    <div className="space-y-2 text-xs">
+                      <p className="text-muted-foreground">
+                        {event.viewer_name && <span className="text-white font-medium">{event.viewer_name}</span>}
+                        {event.viewer_email && <span className="text-muted-foreground"> ({event.viewer_email})</span>}
+                        {!event.viewer_name && !event.viewer_email && <span className="text-muted-foreground">anonymous</span>}
+                        {' • '}
+                        <span className="font-mono">{event.ip_address || 'unknown IP'}</span>
+                        {' • '}
+                        <span>{parseUserAgent(event.user_agent)}</span>
+                        {' • '}
+                        <span>Accessed {event.access_count} time{event.access_count !== 1 ? 's' : ''}</span>
+                      </p>
+                      {event.share_slug && (
+                        <p className="text-primary/80 font-mono text-[9px]">/v/{event.share_slug}</p>
+                      )}
+                    </div>
+                  )}
+
+                  {event.type === 'share' && (
+                    <p className="text-primary/80 font-mono text-[9px]">/v/{event.share_slug}</p>
+                  )}
+
+                  {event.type === 'document' && (
+                    <p className="text-muted-foreground text-xs">Document created</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -364,7 +421,7 @@ export function Dashboard() {
         )}
 
         {activeView === 'analytics' && (
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-6 overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               {[
                 ['Documents', analytics?.documents ?? 0],
@@ -379,16 +436,65 @@ export function Dashboard() {
                 </div>
               ))}
             </div>
+
             <div className="border border-border bg-card/50 rounded-lg p-6">
               <h2 className="font-mono text-xs uppercase tracking-widest text-white mb-4">Top Share Links</h2>
               {(analytics?.top_shares ?? []).length === 0 ? (
                 <p className="text-muted-foreground text-sm">No share activity yet.</p>
-              ) : analytics.top_shares.map((share: any) => (
-                <div key={share.slug} className="flex items-center justify-between border-t border-border py-3">
-                  <code className="text-primary text-xs">/v/{share.slug}</code>
-                  <span className="font-mono text-xs text-muted-foreground">{share.views} views</span>
+              ) : (
+                <div className="space-y-3">
+                  {analytics.top_shares.map((share: any) => (
+                    <div key={share.slug} className="flex items-center justify-between border border-border/50 rounded p-3 bg-black/30">
+                      <div className="flex-1">
+                        <p className="text-white font-semibold text-sm">{share.document_title}</p>
+                        <code className="text-primary text-xs">/v/{share.slug}</code>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <span className="font-mono text-xs text-muted-foreground">{share.views} views</span>
+                        {share.expires_at && (
+                          <Badge variant="outline" className="text-[9px] border-primary/20 text-primary">
+                            Expires {new Date(share.expires_at).toLocaleDateString()}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
+            </div>
+
+            <div className="border border-border bg-card/50 rounded-lg p-6">
+              <h2 className="font-mono text-xs uppercase tracking-widest text-white mb-4">Recent Activity</h2>
+              {(analytics?.recent_sessions ?? []).length === 0 ? (
+                <p className="text-muted-foreground text-sm">No recent sessions.</p>
+              ) : (
+                <div className="space-y-3">
+                  {analytics.recent_sessions.map((session: any, idx: number) => (
+                    <div key={idx} className="border border-border/50 rounded p-3 bg-black/30">
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <p className="text-white font-semibold text-sm">{session.document_title}</p>
+                          <p className="text-muted-foreground text-xs">
+                            {session.viewer_name && <span className="text-white font-medium">{session.viewer_name}</span>}
+                            {session.viewer_email && <span className="text-muted-foreground"> ({session.viewer_email})</span>}
+                            {!session.viewer_name && !session.viewer_email && <span>anonymous</span>}
+                          </p>
+                        </div>
+                        <span className="font-mono text-[10px] text-muted-foreground">
+                          {new Date(session.started_at).toLocaleString()}
+                        </span>
+                      </div>
+                      <div className="text-xs text-muted-foreground space-x-2">
+                        <span className="font-mono">{session.ip_address || 'unknown IP'}</span>
+                        <span>•</span>
+                        <span>{parseUserAgent(session.user_agent)}</span>
+                        <span>•</span>
+                        <span>{formatDuration(session.total_time_seconds)}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
