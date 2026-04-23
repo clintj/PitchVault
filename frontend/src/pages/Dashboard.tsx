@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, LayoutDashboard, FilePlus, FolderPlus, Folder as FolderIcon, History, Zap, Settings, Search, Terminal, Globe, Trash2, ChevronRight, Users, UserPlus, ShieldAlert, Pencil, Key } from 'lucide-react';
+import { Shield, LayoutDashboard, FilePlus, FolderPlus, Folder as FolderIcon, History, Zap, Settings, Search, Terminal, Globe, Trash2, ChevronRight, Users, UserPlus, ShieldAlert, Pencil, Key, LogOut } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useAuth } from '../hooks/useAuth';
 import { api } from '../lib/api';
@@ -324,8 +324,8 @@ export function Dashboard() {
                     <p className="text-sm font-medium truncate text-white">{user?.name}</p>
                     <p className="text-[10px] text-muted-foreground truncate uppercase tracking-tighter">{user?.role}</p>
                 </div>
-                <Button variant="ghost" size="icon" onClick={() => { logout(); navigate('/login'); }} className="text-muted-foreground hover:text-white shrink-0">
-                    <Settings size={16} />
+                <Button variant="ghost" size="icon" onClick={() => { logout(); navigate('/login'); }} className="text-muted-foreground hover:text-destructive shrink-0" title="Sign out">
+                    <LogOut size={16} />
                 </Button>
             </div>
           </div>
